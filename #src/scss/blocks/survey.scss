@@ -1,0 +1,44 @@
+.survey {
+    margin-top: 164px;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;       
+        align-items: center;
+    }
+
+    &__preview {
+        width: 708px;
+        
+       
+    }
+
+    &__preview-text {
+        padding-bottom: 16px;
+        font-size: 16px;
+        line-height: 21.79px;
+    }
+
+    &__wrapper {
+       
+    }
+}
+.container {
+}
+.form {
+
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21.79px;
+    }
+
+    &__info {
+    }
+
+    &__input {
+    }
+
+    &__button {
+    }
+}
