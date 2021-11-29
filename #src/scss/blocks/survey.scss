@@ -20,12 +20,13 @@
     }
 
     &__wrapper {
+        margin-left: 20px;
        
     }
 }
-.container {
-}
+
 .form {
+    margin-top: 20px;
 
     &__title {
         font-weight: 700;
@@ -34,11 +35,135 @@
     }
 
     &__info {
+        display: flex;
+        margin: 17px 0 8px ;
     }
 
     &__input {
+        border: 1px solid #ADADAD;
+        border-radius: 10px;
+        max-width: 464px;
+        width: 100%;
+        padding: 17px 15px;
+        
+
     }
 
     &__button {
+       
+        background: $pink;
+        border: 1px solid $pink;
+        border-radius: 10px;
+        max-width: 224px;
+        width: 100%;
+        padding: 17px 27px;
+        font-size: 18px;
+        line-height: 24.51px;
+        color: #FFFFFF;
+        margin-left: 20px;
+
+       &:hover{
+          border: 1px solid $pink;
+          background: $white;
+          color: $pink ;
+        }
+    }
+
+    &__notice{
+        font-size: 10px;
+        line-height: 13.62px;
+        font-weight: 700;
     }
 }
+
+.survey-step {
+   
+    background: url("../img/BG.png");   
+   
+    width: 100%;
+    height: 740px;
+    position: relative;
+   
+    
+    &__title {
+        margin-top: 113px;
+    }
+
+
+    &__caption {
+        
+        font-size: 36px;
+        line-height: 43.2px;
+    }
+
+    &__border {
+       max-width: 528px;
+       width: 100%;
+       background: rgba(249, 249, 249, 1) ;
+       position: absolute;
+       top: -75px;
+       right: 103px;
+    }
+}
+
+
+
+.form-survey {         
+   
+
+    &__wrapper {
+         display: flex;
+       
+        flex-direction: column;
+       
+        
+    }
+
+    &__radio {
+        padding: 18px 16px 20px;
+    }
+
+    &__radio-input {
+
+        // &:checked+{
+        //     background: $pink;
+        // }
+    }
+
+    &__radio-text {
+        
+        font-size: 16px;
+        line-height: 21.79px;
+        margin-left: 16px;
+    }
+
+    &__button {
+        background: $pink;
+        border: 1px solid $pink;
+        border-radius: 10px;
+        max-width: 488px;
+        width: 100%;
+        padding: 17px 220px;
+        font-size: 18px;
+        line-height: 24.51px;
+        color: #FFFFFF;
+        margin: 25px 20px 38px;
+
+        &:hover{
+            border: 1px solid $pink;
+            background: $white;
+            color: $pink ;
+          }
+
+        }
+       &__line{
+           margin-left: 20px;
+           width: 488px;
+           height: 2px;          
+           background: rgba(34, 34, 34, 0.2);
+
+
+       }
+}
+
+
