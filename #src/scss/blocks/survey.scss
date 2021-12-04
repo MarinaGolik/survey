@@ -1,42 +1,60 @@
 .survey {
-    margin-top: 164px;
+    margin-top: 100px;
+    margin-bottom: 169.78px;
+   
 
-    &__body {
+    &__body { 
+       
+
+       
+    }
+    &__start{
         display: flex;
         justify-content: space-between;       
         align-items: center;
-    }
 
+    }
     &__preview {
-        width: 708px;
+       
+        max-width: 708px;
+        font-size: 16px;
+        line-height: 21.79px; 
+    }
         
        
-    }
 
     &__preview-text {
-        padding-bottom: 16px;
-        font-size: 16px;
-        line-height: 21.79px;
+        padding-bottom: 34px;
+      
     }
 
-    &__wrapper {
+    &__wrapper-img {
         margin-left: 20px;
        
     }
+    &__preview-attention {
+        font-weight: 700;
+       
+    }
+
 }
 
 .form {
-    margin-top: 20px;
+    margin-top: 16px;
+    
 
-    &__title {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 21.79px;
-    }
-
-    &__info {
+   
+    &__wrapper {
         display: flex;
-        margin: 17px 0 8px ;
+        justify-content: space-between;
+        align-items: flex-start;      
+      
+    }
+    &____info{
+        margin-right: 20px;
+        
+
+
     }
 
     &__input {
@@ -44,7 +62,7 @@
         border-radius: 10px;
         max-width: 464px;
         width: 100%;
-        padding: 17px 15px;
+        padding: 21px 17.7px;
         
 
     }
@@ -56,11 +74,14 @@
         border-radius: 10px;
         max-width: 224px;
         width: 100%;
-        padding: 17px 27px;
+        height: 59px;
+        align-items: center;
+        
         font-size: 18px;
         line-height: 24.51px;
+        font-weight: 800;
         color: #FFFFFF;
-        margin-left: 20px;
+      
 
        &:hover{
           border: 1px solid $pink;
@@ -72,21 +93,31 @@
     &__notice{
         font-size: 10px;
         line-height: 13.62px;
-        font-weight: 700;
+        margin-top: 9px;
+        
     }
+}
+.survey-question1 {
+    background: url("../img/BG.png")  no-repeat center/cover; 
+    min-height: 740px;  
+    width: 100%;
+    margin-top: 118px;
+    margin-bottom: 100px;
 }
 
 .survey-step {
-   
-    background: url("../img/BG.png");   
-   
-    width: 100%;
-    height: 740px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    
    
     
     &__title {
-        margin-top: 113px;
+        margin-top: 113px ;
+        max-width: 412px;
+        align-items: flex-start;
+        
     }
 
 
@@ -94,47 +125,62 @@
         
         font-size: 36px;
         line-height: 43.2px;
+        font-weight: 700;
     }
 
     &__border {
        max-width: 528px;
        width: 100%;
        background: rgba(249, 249, 249, 1) ;
-       position: absolute;
+       position: relative;
        top: -75px;
-       right: 103px;
+       
     }
 }
 
 
+input[type="radio"] {
+    appearance: none;
+    position: relative;
+}
 
-.form-survey {         
-   
 
-    &__wrapper {
+input[type="radio"]:checked+.form-survey__radio::after {
+    background: $pink;
+}
+
+
+.form-survey {    
+
+    &__wrapper  {
          display: flex;
-       
-        flex-direction: column;
-       
-        
+         flex-direction: column;            
     }
 
     &__radio {
-        padding: 18px 16px 20px;
+        padding: 18px 20px 20px;
+
+        ::before {
+            position: absolute;
+            content: '';
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            border: 1px solid $black;
+            left: 16px;
+            // top: 50%;
+            // transform: translateY(-50%);
+        }        
     }
 
-    &__radio-input {
-
-        // &:checked+{
-        //     background: $pink;
-        // }
-    }
+    
 
     &__radio-text {
         
         font-size: 16px;
         line-height: 21.79px;
-        margin-left: 16px;
+        margin-left: 46px;
+       
     }
 
     &__button {
@@ -165,5 +211,9 @@
 
        }
 }
+
+
+
+
 
 

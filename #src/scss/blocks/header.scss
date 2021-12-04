@@ -1,28 +1,18 @@
 
 .header {
-    background-color: $blue;
-    height: 50px;   
-     
-        
     
-     &__body {
-        
-    }
-
-    &__top {
-        
-       
-          }
-
     &__text {
+        background-color: $blue;
+        height: 50px;   
         font-weight: 700;
         text-align: center;
+        align-items: center;
         font-size: 36px;
         line-height: 43.2px;
         color: $white;
     }
 
-    &__bottom {
+    &__basic {
         padding-top: 22px;
         display: flex;
         justify-content: space-between;

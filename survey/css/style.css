@@ -70,6 +70,7 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -118,20 +119,20 @@ img {
   padding: 0 15px;
 }
 
-.header {
+.header__text {
   background-color: #010A43;
   height: 50px;
-}
-
-.header__text {
   font-weight: 700;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 36px;
   line-height: 43.2px;
   color: #F9F9F9;
 }
 
-.header__bottom {
+.header__basic {
   padding-top: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,10 +162,11 @@ img {
 }
 
 .survey {
-  margin-top: 164px;
+  margin-top: 100px;
+  margin-bottom: 169.78px;
 }
 
-.survey__body {
+.survey__start {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,34 +179,41 @@ img {
 }
 
 .survey__preview {
-  width: 708px;
+  max-width: 708px;
+  font-size: 16px;
+  line-height: 21.79px;
 }
 
 .survey__preview-text {
-  padding-bottom: 16px;
-  font-size: 16px;
-  line-height: 21.79px;
+  padding-bottom: 34px;
 }
 
-.survey__wrapper {
+.survey__wrapper-img {
   margin-left: 20px;
 }
 
-.form {
-  margin-top: 20px;
-}
-
-.form__title {
+.survey__preview-attention {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 21.79px;
 }
 
-.form__info {
+.form {
+  margin-top: 16px;
+}
+
+.form__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 17px 0 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.form____info {
+  margin-right: 20px;
 }
 
 .form__input {
@@ -212,7 +221,7 @@ img {
   border-radius: 10px;
   max-width: 464px;
   width: 100%;
-  padding: 17px 15px;
+  padding: 21px 17.7px;
 }
 
 .form__button {
@@ -221,11 +230,14 @@ img {
   border-radius: 10px;
   max-width: 224px;
   width: 100%;
-  padding: 17px 27px;
+  height: 59px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
   line-height: 24.51px;
+  font-weight: 800;
   color: #FFFFFF;
-  margin-left: 20px;
 }
 
 .form__button:hover {
@@ -237,32 +249,60 @@ img {
 .form__notice {
   font-size: 10px;
   line-height: 13.62px;
-  font-weight: 700;
+  margin-top: 9px;
+}
+
+.survey-question1 {
+  background: url("../img/BG.png") no-repeat center/cover;
+  min-height: 740px;
+  width: 100%;
+  margin-top: 118px;
+  margin-bottom: 100px;
 }
 
 .survey-step {
-  background: url("../img/BG.png");
-  width: 100%;
-  height: 740px;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .survey-step__title {
   margin-top: 113px;
+  max-width: 412px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .survey-step__caption {
   font-size: 36px;
   line-height: 43.2px;
+  font-weight: 700;
 }
 
 .survey-step__border {
   max-width: 528px;
   width: 100%;
   background: #f9f9f9;
-  position: absolute;
+  position: relative;
   top: -75px;
-  right: 103px;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+
+input[type="radio"]:checked + .form-survey__radio::after {
+  background: #FF2E63;
 }
 
 .form-survey__wrapper {
@@ -276,13 +316,23 @@ img {
 }
 
 .form-survey__radio {
-  padding: 18px 16px 20px;
+  padding: 18px 20px 20px;
+}
+
+.form-survey__radio ::before {
+  position: absolute;
+  content: '';
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #222222;
+  left: 16px;
 }
 
 .form-survey__radio-text {
   font-size: 16px;
   line-height: 21.79px;
-  margin-left: 16px;
+  margin-left: 46px;
 }
 
 .form-survey__button {
@@ -313,7 +363,6 @@ img {
 
 .footer {
   background: #010A43;
-  margin-top: 169.78px;
 }
 
 .footer__body {
@@ -335,7 +384,7 @@ img {
   margin-top: 40px;
 }
 
-.footer__nav {
+.footer__cart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,7 +405,7 @@ img {
 }
 
 .footer__bottom {
-  margin: 28px 0 26px;
+  margin: 40px 0 26px;
 }
 
 .footer__copyright {
@@ -364,4 +413,9 @@ img {
   font-weight: 700;
 }
 
-.webp .survey-step { background: url(../img/BG.webp); }
+.footer__content-link {
+  color: #F9F9F9;
+  text-decoration: underline;
+}
+
+.webp .survey-question1 { background: url(../img/BG.webp) no-repeat center/cover; }

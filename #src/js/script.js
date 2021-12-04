@@ -30,6 +30,10 @@ jQuery(document).ready(function () {
 //    dateSpan.html(today);
 
    const body = $('.survey__body');
+    const main = $('main');
+   console.log(data);
+  
+
 
    data = {
       email: '',
@@ -39,50 +43,60 @@ jQuery(document).ready(function () {
 
 
 
-const step_1 =`<section class="survey-step">
-<div class="survey-step__title">
-  <h2 class="survey-step__caption">How often do you <br/> shop online?</h2>
-</div>
-             <div class="survey-step__border">
+const step_1 =` <section class="survey-question1">
+<div class="container">  
+  <div class="survey__body">
+  <div class="survey-step">
+   <div class="survey-step__title">
+     <h2 class="survey-step__caption">How often do you  shop online?</h2>
+   </div>
+    <div class="survey-step__border">
       <form action="form-survey">
          <div class="form-survey__wrapper">
-            <label for="radio1" class="form-survey__radio">
-               <input class="form-survey__radio-input" type="radio" name="frequence" id="radio1" data-attribute='Daily'>
+         <input class="form-survey__radio-input" type="radio" name="frequence" id="radio1" data-attribute='Daily'>
+            <label for="radio1" class="form-survey__radio">                 
                <span class="form-survey__radio-text">Daily</span>
             </label>
             <div class="form-survey__line"></div>
+
+            <input  type="radio" name="frequence" id="radio2" data-attribute='Once in 2-3 days'>
             <label for="radio2" class="form-survey__radio">
-               <input class="form-survey__radio-input" type="radio" name="frequence" id="radio2" data-attribute='Once in 2-3 days'>
-               <span class="form-survey__radio-text">Once in 2-3 days</span>
+               <span class="form-survey__radio-text"> Once in 2-3 days</span>
             </label>
             <div class="form-survey__line"></div>
+
+            <input  type="radio" name="frequence" id="radio3" data-attribute='Weekly'>
             <label for="radio3" class="form-survey__radio">
-               <input class="form-survey__radio-input" type="radio" name="frequence" id="radio3" data-attribute='Weekly'>
                <span class="form-survey__radio-text">Weekly</span>
             </label>
             <div class="form-survey__line"></div>
+
+            <input  type="radio" name="frequence" id="radio4" data-attribute='Monthly'>
             <label for="radio4" class="form-survey__radio">
-               <input class="form-survey__radio-input" type="radio" name="frequence" id="radio4" data-attribute='Monthly'>
                <span class="form-survey__radio-text">Monthly</span>
             </label>
             <div class="form-survey__line"></div>
+
+            <input type="radio" name="frequence" id="radio5" data-attribute='Once in 2-3 months'>
             <label for="radio5" class="form-survey__radio">
-               <input class="form-survey__radio-input" type="radio" name="frequence" id="radio5" data-attribute='Once in 2-3 months'>
                <span class="form-survey__radio-text">Once in 2-3 months</span>
             </label>
             <div class="form-survey__line"></div>
+
+            <input  type="radio" name="frequence" id="radio6" data-attribute='When I'm free'>
             <label for="radio6" class="form-survey__radio">
-               <input class="form-survey__radio-input" type="radio" name="frequence" id="radio6" data-attribute='When I'm free'>
                <span class="form-survey__radio-text">When I'm free</span>
             </label>
             <div class="form-survey__line"></div>
+            
             <button class="form-survey__button" >Next </button>
           </div> 
        </form>        
-    </div>      
-  
+    </div>  
+  </div>   
+ </div>
+</div>
 </section>
-
 `
 const step_2 = ` <section class="survey-step">
   <div class="survey-step__title">
@@ -143,7 +157,7 @@ function checkedRadio(step, key, class1, class2) {
    $.each($('input[type="radio"]'), function () {
       if ($(this).is(':checked')) {
          data[`${key}`] = $(this).next().text()
-         body.html(step);
+         main.html(step);
          body.removeClass(`${class1}`).addClass(`${class2}`)
       }
    })
@@ -154,7 +168,7 @@ function changeStep() {
       data.email = $('input[name="email"]').val();
 
       if (data.email.length !== 0) {
-         body.html(step_1);
+         main.html(step_1);
          body.removeClass('previewStep').addClass('firstStep')
       }
    } else if (body.is('.firstStep')) {
@@ -169,6 +183,7 @@ body.on('click', 'button', function (e) {
    changeStep()
    console.log(data);
 })
+
 });
 
 //добавляем в док.текущую дату. в двух местах.
@@ -186,7 +201,7 @@ let month = date.getMonth(),
           month=allMonth[i]
        }
     }
-    let newDate = month+` `+ day +`,`+ year;
+    let newDate = month+` `+ day +`, `+ year;
   
 
  let spanData = document.getElementById(`date`);
