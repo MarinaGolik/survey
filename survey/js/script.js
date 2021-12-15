@@ -66,37 +66,32 @@ const step_1 =`
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Daily</span>  
             </label>            
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="frequence" id="radio2" data-attribute='Once in 2-3 days'>
             <label for="radio2" class="form-survey__radio">
                <span class="form-survey__radiotext"> Once in 2-3 days</span>
             </label>
-            <div class="form-survey__line"></div>
-
+           
             <input  type="radio" name="frequence" id="radio3" data-attribute='Weekly'>
             <label for="radio3" class="form-survey__radio">
                <span class="form-survey__radiotext">Weekly</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="frequence" id="radio4" data-attribute='Monthly'>
             <label for="radio4" class="form-survey__radio">
                <span class="form-survey__radiotext">Monthly</span>
             </label>
-            <div class="form-survey__line"></div>
-
+           
             <input type="radio" name="frequence" id="radio5" data-attribute='Once in 2-3 months'>
             <label for="radio5" class="form-survey__radio">
                <span class="form-survey__radiotext">Once in 2-3 months</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="frequence" id="radio6" data-attribute='When I'm free'>
             <label for="radio6" class="form-survey__radio">
                <span class="form-survey__radiotext">When I'm free</span>
             </label>
-            <div class="form-survey__line"></div>
+            
             
             <button class="form-survey__button" >Next </button>
           </div> 
@@ -122,44 +117,37 @@ const step_2 = `
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Electronics</span>  
             </label>            
-            <div class="form-survey__line"></div>
-
+           
             <input  type="radio" name="products" id="radio2" data-attribute='Smart devices'>
             <label for="radio2" class="form-survey__radio">
                <span class="form-survey__radiotext"> Smart devices </span>
             </label>
-            <div class="form-survey__line"></div>
-
+           
             <input  type="radio" name="products" id="radio3" data-attribute='Home/kitchen appliances'>
             <label for="radio3" class="form-survey__radio">
                <span class="form-survey__radiotext">Home/kitchen appliances</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="products" id="radio4" data-attribute='Health and beauty'>
             <label for="radio4" class="form-survey__radio">
                <span class="form-survey__radiotext">Health and beauty</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input type="radio" name="products" id="radio5" data-attribute='Clothing and accessories'>
             <label for="radio5" class="form-survey__radio">
                <span class="form-survey__radiotext">Clothing and accessories</span>
             </label>
-            <div class="form-survey__line"></div>
-
+           
             <input  type="radio" name="products" id="radio6" data-attribute='Food and grocery'>
             <label for="radio6" class="form-survey__radio">
                <span class="form-survey__radiotext">Food and grocery</span>
             </label>
-            <div class="form-survey__line"></div>
-
+          
             <input  type="radio" name="products" id="radio7" data-attribute='Other'>
             <label for="radio7" class="form-survey__radio">
                <span class="form-survey__radiotext">Other (please specify) </span>
             </label>
-            <div class="form-survey__line"></div>
-
+        
             <textarea  class="form-survey__textarea hide" id="othertext2" placeholder="Please us know more... "></textarea>
             
             <button class="form-survey__button" >Next </button>
@@ -186,42 +174,42 @@ const step_3 = `
               <label for="radio1" class="form-survey__radio">                 
               <span class="form-survey__radiotext">Amazon</span>  
               </label>            
-              <div class="form-survey__line"></div>
+             
   
               <input  type="radio" name="website" id="radio2" data-attribute='Ikea'>
               <label for="radio2" class="form-survey__radio">
                  <span class="form-survey__radiotext"> Ikea </span>
               </label>
-              <div class="form-survey__line"></div>
+              
   
               <input  type="radio" name="website" id="radio3" data-attribute='Target'>
               <label for="radio3" class="form-survey__radio">
                  <span class="form-survey__radiotext">Target</span>
               </label>
-              <div class="form-survey__line"></div>
+              
   
               <input  type="radio" name="website" id="radio4" data-attribute='Best Buy'>
               <label for="radio4" class="form-survey__radio">
                  <span class="form-survey__radiotext">Best Buy</span>
               </label>
-              <div class="form-survey__line"></div>
+              
   
               <input type="radio" name="website" id="radio5" data-attribute='P.C. Richard & Son'>
               <label for="radio5" class="form-survey__radio">
                  <span class="form-survey__radiotext">P.C. Richard & Son</span>
               </label>
-              <div class="form-survey__line"></div>
+              
   
               <input  type="radio" name="website" id="radio6" data-attribute='The Home Depot'>
               <label for="radio6" class="form-survey__radio">
                  <span class="form-survey__radiotext">The Home Depot</span>
               </label>
-              <div class="form-survey__line"></div>
+              
               <input  type="radio" name="website" id="radio7" data-attribute='Other'>
               <label for="radio7" class="form-survey__radio">
                  <span class="form-survey__radiotext">Other (please specify) </span>
               </label>
-              <div class="form-survey__line"></div>
+              
   
               <textarea  class="form-survey__textarea hide" id="othertext3" placeholder="Please us know more... "></textarea>
               
@@ -245,48 +233,41 @@ const step_4 =`
     <div class="survey-step__border">
       <form action="form-survey">
          <div class="form-survey__wrapper">
-
          <input type="radio" name="attracts" id="radio1" data-attribute='Good quality'>
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Good quality</span>  
             </label>            
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="attracts" id="radio2" data-attribute='Fast shipping'>
             <label for="radio2" class="form-survey__radio">
                <span class="form-survey__radiotext"> Fast shipping</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="attracts" id="radio3" data-attribute='Regular sales'>
             <label for="radio3" class="form-survey__radio">
                <span class="form-survey__radiotext">Regular sales</span>
             </label>
-            <div class="form-survey__line"></div>
-
+          
             <input  type="radio" name="attracts" id="radio4" data-attribute='Loyalty programs '>
             <label for="radio4" class="form-survey__radio">
                <span class="form-survey__radiotext">Loyalty programs</span>
             </label>
-            <div class="form-survey__line"></div>
-
+           
             <input type="radio" name="attracts" id="radio5" data-attribute='Availability of goods in stock'>
             <label for="radio5" class="form-survey__radio">
                <span class="form-survey__radiotext">Availability of goods in stock</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="attracts" id="radio6" data-attribute='Vouchers'>
             <label for="radio6" class="form-survey__radio">
                <span class="form-survey__radiotext">Vouchers</span>
             </label>
-            <div class="form-survey__line"></div>
+          
             <input  type="radio" name="attracts" id="radio7" data-attribute='Other'>
             <label for="radio7" class="form-survey__radio">
                <span class="form-survey__radiotext">Other (please specify) </span>
             </label>
-            <div class="form-survey__line"></div>
-
+          
             <textarea  class="form-survey__textarea hide" id="othertext4" placeholder="Please us know more... "></textarea>
             
             <button class="form-survey__button" >Next </button>
@@ -309,48 +290,41 @@ const step_5 = `
     <div class="survey-step__border">
       <form action="form-survey">
          <div class="form-survey__wrapper">
-
          <input type="radio" name="expend" id="radio1" data-attribute='Less than 100 USD'>
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Less than 100 USD</span>  
             </label>            
-            <div class="form-survey__line"></div>
-
+           
             <input  type="radio" name="expend" id="radio2" data-attribute='$100 - $250'>
             <label for="radio2" class="form-survey__radio">
                <span class="form-survey__radiotext"> $100 - $250 </span>
             </label>
-            <div class="form-survey__line"></div>
-
+          
             <input  type="radio" name="expend" id="radio3" data-attribute='$250 - $500'>
             <label for="radio3" class="form-survey__radio">
                <span class="form-survey__radiotext">$250 - $500</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="expend" id="radio4" data-attribute='$500 - $1000 '>
             <label for="radio4" class="form-survey__radio">
                <span class="form-survey__radiotext">$500 - $1000</span>
             </label>
-            <div class="form-survey__line"></div>
-
+           
             <input type="radio" name="expend" id="radio5" data-attribute='$1000 - $2000'>
             <label for="radio5" class="form-survey__radio">
                <span class="form-survey__radiotext">$1000 - $2000</span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <input  type="radio" name="expend" id="radio6" data-attribute='More than 2000 USD'>
             <label for="radio6" class="form-survey__radio">
                <span class="form-survey__radiotext">More than 2000 USD</span>
             </label>
-            <div class="form-survey__line"></div>
+            
             <input  type="radio" name="expend" id="radio7" data-attribute='Other'>
             <label for="radio7" class="form-survey__radio">
                <span class="form-survey__radiotext">Other (please specify) </span>
             </label>
-            <div class="form-survey__line"></div>
-
+            
             <textarea  class="form-survey__textarea hide" id="othertext5" placeholder="Please us know more... "></textarea>
             
             <button class="form-survey__button" >Next </button>
@@ -372,7 +346,7 @@ const step_6 =`
               <div class=" survey-endstep__processing">
                 <div class=" survey-endstep__progressbar">
                    <div id="loadingProgressG">
-                   <div id="loadingProgressG_1" class="loadingProgressG"></div> </div>
+                   <div id="loadingProgressG_1" class="loadingProgressG" value="0" max="100"></div> </div>
                 </div>    
                      <p class="survey-endstep__text">Answers submitted.....</p>
                      <p class="survey-endstep__text">Ma tching best offers for you......</p>                
@@ -411,7 +385,6 @@ const step_7 =`
 <section class="publicity">
 <div class="container">
    <div class="publicity__body">
-
    <div class="publicity__border">
    <div class="publicity__poster"> 
    <div class="publicity__img">
@@ -522,7 +495,6 @@ const step_7 =`
 </div>
 </section> 
  
-
  `  
 
 
@@ -547,7 +519,7 @@ function textareaOn(){
       $(this).on('click', ()=>{
          if($(this).attr('data-attribute') === 'Other'){
             textarea.removeClass('hide')                       
-           $(this).prop('checked',false); 
+           //$(this).prop('checked',false); 
            textareaChange()                                
           } else {
                textarea.addClass('hide')
@@ -562,6 +534,7 @@ function  textareaChange() {
       $('.form-survey__textarea').on('change', function(){
          let textareas = $('textarea');         
          $.each (textareas, function() {
+         
             let textarea=$(this)
       
             switch (textarea.attr('id')) {
@@ -704,6 +677,3 @@ const submitForm = async () => {
 
 //      spanData.innerHTML = newDate;
 //      spanDataTwo.innerHTML = newDate;
-
-
-

@@ -91,6 +91,7 @@
         line-height: 24.51px;
         font-weight: 800;
         color: #FFFFFF;
+        cursor: pointer;
       
 
        &:hover{
@@ -183,18 +184,18 @@
     
     &__wrapper  {
          display: flex;
-         flex-direction: column;  
+         flex-direction: column;
+         padding: 33px 20px 30px;  
                    
     }
 
     &__radio {
-        padding: 18px 16px 20px;
+        padding: 18px 0 20px;
         position: relative;
+        cursor: pointer;
+        border-bottom: 2px solid rgba(34, 34, 34, 0.2);
         
-        :first-child{
-            padding-top: 33px;
-        }
-
+        
         ::before {
             position: absolute;
             content: '';
@@ -202,7 +203,7 @@
             width: 30px;
             border-radius: 50%;
             border: 1px solid $black;
-            left: 20px;
+            left: 0px;
             top: 50%;
             transform: translateY(-50%);                 
         }   
@@ -228,10 +229,12 @@
         max-width: 488px;
         width: 100%;
         padding: 17px 220px;
+        margin-top: 25px;
         font-size: 18px;
         line-height: 24.51px;
         color: #FFFFFF;
-        margin: 25px 20px 38px;
+        cursor: pointer;
+    
 
         &:hover{
             border: 1px solid $pink;
@@ -247,7 +250,7 @@
            background: rgba(34, 34, 34, 0.2);
        }
        &__textarea{
-           margin: 15px 20px 25px;
+           margin-top: 15px;
            max-width: 488px;
            min-height: 200px;
            border:2px solid rgba(34, 34, 34, 0.2);
@@ -395,6 +398,7 @@ input[type="radio"]:checked+ label ::before{
         font-size: 18px;
         line-height: 24.51px;
         color: #FFFFFF;
+        cursor: pointer;
         
 
         &:hover{
@@ -552,11 +556,11 @@ input[type="radio"]:checked+ label ::before{
 		-ms-animation-name:bounce_loadingProgressG;
 		-webkit-animation-name:bounce_loadingProgressG;
 		-moz-animation-name:bounce_loadingProgressG;
-	animation-duration:5.2s;
-		-o-animation-duration:5.2s;
-		-ms-animation-duration:5.2s;
-		-webkit-animation-duration:5.2s;
-		-moz-animation-duration:5.2s;
+	animation-duration:8.0s;
+		-o-animation-duration:8.0s;
+		-ms-animation-duration:8.0s;
+		-webkit-animation-duration:8.0s;
+		-moz-animation-duration:8.0s;
 	animation-iteration-count:infinite;
 		-o-animation-iteration-count:infinite;
 		-ms-animation-iteration-count:infinite;
