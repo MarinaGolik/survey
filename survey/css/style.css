@@ -254,6 +254,15 @@ img {
   max-width: 460px;
 }
 
+.error {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: #f9f9f9;
+  background-color: #FF2E63;
+  border-radius: 10px;
+}
+
 .survey-question {
   background: url("../img/BG.png") no-repeat center/cover;
   min-height: 740px;

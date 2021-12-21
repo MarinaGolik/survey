@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
    });
 
    
-   let dateSpan = $('#date, #date2')
+   let dateSpan = $('#date, #dateOnly')
    const monthsAll = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
    const date = new Date();
@@ -31,22 +31,23 @@ jQuery(document).ready(function () {
 
    dateSpan.html(today);
 
+
+
+
    const body = $('.survey__body');
-   const main = $('main');
-   
- 
-   
-
-  
-
+   const main = $('main'); 
 
    data = {
       email: '',
       question_1: '',
       question_2: '',
+      question_2_other:'',
       question_3: '',
+      question_3_other:'',
       question_4: '',
+      question_4_other:'',
       question_5: '',
+      question_5_other:'',
    }
 
 
@@ -495,122 +496,179 @@ const step_7 =`
 </div>
 </section> 
  
- `  
+ `
+ //Валидация формы на стороне клиента
+ $("form").validate({
+   rules: {
+     // name: "required",
+      email: {
+        required: true,
+         email: true
+      }
+    },
+    messages: {
+      //name: "Please specify your name",
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com"
+      }
+    }
+
+ });
+
+//  const form  = $('form');
+//  const email = $('#email');
+//  const emailError = $('#email + span.error');
+//  console.log(emailError);
+
+//  function validated(){    
+//    email.on('click', function () {
+//      // Каждый раз, когда пользователь что-то вводит,
+//      // мы проверяем, являются ли поля формы валидными
+   
+//      if (email.validity.valid) {
+//        // Если на момент валидации какое-то сообщение об ошибке уже отображается,
+//        // если поле валидно, удаляем сообщение
+//        emailError.text(''); // Сбросить содержимое сообщения
+//        emailError.addClass('error') ; // Сбросить визуальное состояние сообщения
+//      } else {
+//        // Если поле не валидно, показываем правильную ошибку
+//        showError();
+//      }
+//    })
+
+//  }
 
 
+// function showError() {
+//    if(email.validity.valueMissing) {
+//      // Если поле пустое,
+//      // отображаем следующее сообщение об ошибке
+//      emailError.text('Please enter e-mail address')
+//    } else if (email.validity.typeMismatch ) {
+//      // Если поле содержит не email-адрес,
+//      // отображаем следующее сообщение об ошибке
+//      emailError.text('Please enter a valid email address')
+//    }
+// }
 
-
-
+ 
+ 
+ 
+//  $('form').click(function(e)  {
+  
+//    const email = $('input[type="email"]').val()
+//    $(".error").remove(); 
+//      if (email.length <= 1) {
+//       $('#email').after('<span class="error">Please enter e-mail address</span>')
+//       //$(this).addClass('error')
+//       console.log(1);
+//      } else{
+//       let regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
+//       let validEmail = regEx.test(email);
+//       if (!validEmail) {
+//         $('#email').after('<span class="error">Please enter a valid email address</span>');
+//         console.log(2);
+//       }
+//        //$(this).removeClass('error')
+//       //console.log(15);
+//      }
+//    })
 
 function checkedRadio(step, key, class1, class2) {
    $.each($('input[type="radio"]'), function () {
-      if ($(this).is(':checked')) {
+      if ( $(this).is(':checked') ) {
          data[`${key}`] = $(this).attr('data-attribute')
          main.html(step);
          body.removeClass(`${class1}`).addClass(`${class2}`)
-        }     
+        } 
    })
 }
+
 //включение и выключение текстового поля textarea на стеках
-function textareaOn(){
-   const textarea = $('.form-survey__textarea');
-   
+function textareaOn(){  
+   const textarea = $('.form-survey__textarea');   
    $.each($('input[type="radio"]'), function() {
+
       $(this).on('click', ()=>{
-         if($(this).attr('data-attribute') === 'Other'){
-            textarea.removeClass('hide')                       
-           //$(this).prop('checked',false); 
-           textareaChange()                                
+         if($(this).attr('data-attribute') == 'Other'){
+            textarea.removeClass('hide')             
+            textValue()           
           } else {
-               textarea.addClass('hide')
-            }         
+               textarea.addClass('hide')                        
+          }         
       })     
    })
 }
 
+
+   
 //Получение значения с textarea, если оно заполнено, передать данные в объект
 
-function  textareaChange() {   
-      $('.form-survey__textarea').on('change', function(){
-         let textareas = $('textarea');         
-         $.each (textareas, function() {
-         
-            let textarea=$(this)
-      
-            switch (textarea.attr('id')) {
-             case 'othertext2':
-                   data.question_2= $(this).val()
-                   main.html(step_3);
-                   body.removeClass(`secondStep`).addClass(`thirdStep`)  
-                   changeStep()   
-                   break;
+function  textValue(){   
+   $('.form-survey__textarea').on('change', function(){
+      let textareas = $('textarea');         
+      $.each (textareas, function() {
+         let textarea=$(this)
+        
+         switch ($(this).attr('id')) {
+            case 'othertext2':    
+               data.question_2_other= $(this).val();           
+               break;
              case 'othertext3':
-                  data.question_3= $(this).val()
-                  main.html(step_4);
-                  body.removeClass(`thirdStep`).addClass(`fourthStep`)                         
-                  changeStep()              
+                  data.question_3_other = $(this).val();                  
                   break;    
              case 'othertext4':
-                  data.question_4= $(this).val()
-                  main.html(step_5);
-                  body.removeClass(`fourthStep`).addClass('fifthStep')
-                  changeStep()
-                 
+                  data.question_4_other = $(this).val();
                   break;      
              case 'othertext5':
-                  data.question_5= $(this).val()
-                  main.html(step_6);
-                  body.removeClass(`fifthStep`).addClass('endStep')
-                  submitForm();
-                  console.log(data);
+                  data.question_5_other= $(this).val();                
                   break;        
-            }       
-          }) 
-    })
-   
-}
-   
-     
+         } 
+      })
+   })
+ }  
+
 
 function changeStep() {
-   if (body.is('.previewStep')) {
-      data.email = $('input[name="email"]').val();   
+   
+   if (body.is('.previewStep')) {          
+      data.email = $('input[name="email"]').val();      
 
       if (data.email.length !== 0) {
          main.html(step_1);
-         body.removeClass('previewStep').addClass('firstStep')
-         
-         
+         body.removeClass('previewStep').addClass('firstStep');
       }
    }
-   else if (body.is('.firstStep')){     
-         checkedRadio(step_2, 'question_1', 'firstStep', 'secondStep')
-         textareaOn();         
+   else if (body.is('.firstStep') ){
+          checkedRadio(step_2, 'question_1', 'firstStep', 'secondStep');
+          textareaOn();        
         } 
    else if (body.is('.secondStep')) {      
-          checkedRadio(step_3, 'question_2', 'secondStep', 'thirdStep') 
-          textareaOn();
+          checkedRadio(step_3, 'question_2', 'secondStep', 'thirdStep');
+          textareaOn(); 
          }
    else if (body.is('.thirdStep')) {
-          checkedRadio(step_4, 'question_3', 'thirdStep', 'fourthStep') 
+           checkedRadio(step_4, 'question_3', 'thirdStep', 'fourthStep'); 
            textareaOn();
          }
    else if (body.is('.fourthStep')) {
-         checkedRadio(step_5, 'question_4', 'fourthStep', 'fifthStep') 
+         checkedRadio(step_5, 'question_4', 'fourthStep', 'fifthStep') ;
          textareaOn();
          } 
-   else if (body.is('.fifthStep')) {
-          checkedRadio(step_6, 'question_5', 'fifthStep', 'endStep') 
-          textareaOn();
-          submitForm();
-         }
+   else if (body.is('.fifthStep')) {         
+          checkedRadio(step_6, 'question_5', 'fifthStep', 'endStep'); 
+          textareaOn(); 
+          submitForm();      
+         }    
 }
 
 
 
 
 main.on('click', 'button', function (e) {
-   e.preventDefault();
+   e.preventDefault(); 
+   $("form").validate  
    changeStep()
   
 })
@@ -622,9 +680,9 @@ function endStep() {
 }
 
 
-const submitForm = async () => {
-   $('#loadingProgressG').show()
+const submitForm = async () => {   
    try {
+      $('#loadingProgressG').show()
       await $.ajax({
          url: 'http://localhost:8000/posts',
          type: 'POST',
@@ -632,9 +690,13 @@ const submitForm = async () => {
             email: data.email,
             question_1: data.question_1,
             question_2: data.question_2,
+            question_2_other:  data.question_2_other,
             question_3: data.question_3,
+            question_3_other:  data.question_3_other,
             question_4: data.question_4,
+            question_4_other:  data.question_4_other,
             question_5: data.question_5,
+            question_5_other:  data.question_5_other,
          }
       })
       
@@ -643,13 +705,8 @@ const submitForm = async () => {
       console.log(data);
       $('#loadingProgressG').hide()
       endStep()
-      
-
    }
 }
-
-
-
 
 });
 

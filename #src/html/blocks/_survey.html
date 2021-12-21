@@ -14,13 +14,14 @@
                    select one of our exclusive reward offers.
                </p>
                <p class="survey__preview-attention">
-                  This offer is available for today only: <span id="date2"> 1, </span>
+                  This offer is available for today only: <span id="dateOnly"> 1, </span>
               </p>
                
-               <form class="form" action="">              
+               <form class="form" action="" id="formStart" required>              
                   <div class="form__wrapper">
                      <div class="form__info">
-                       <input class="form__input" type="email" name="email" placeholder="Enter your email address">
+                       <input class="form__input" type="email" name="email" id="email"  placeholder="Enter your email address"  required>
+                       <span class="error"  aria-live="polite"></span>
                        <p class="form__notice">Continuing to fill the form you <u>agree</u> that your e-mail will be used by RWSsurwey and our Partners
                        in order to send you promotional offers. </p>  
                      </div>                   
@@ -37,7 +38,6 @@
        </div> 
     </div>
  </section>
-
 
 
  
