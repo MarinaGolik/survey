@@ -256,11 +256,14 @@ img {
 
 .error {
   width: 100%;
-  padding: 0;
-  font-size: 80%;
-  color: #f9f9f9;
-  background-color: #FF2E63;
-  border-radius: 10px;
+  font-size: 85%;
+  color: #f31616;
+}
+
+.error .errorText {
+  width: 100%;
+  font-size: 85%;
+  color: #f31616;
 }
 
 .survey-question {
@@ -446,8 +449,8 @@ input[type="radio"]:checked + label ::before {
 }
 
 .survey-endstep__picture {
-  max-width: 407px;
-  width: 100;
+  width: 407px;
+  width: 100%;
 }
 
 .publicity {
@@ -625,56 +628,32 @@ input[type="radio"]:checked + label ::before {
   width: 100%;
 }
 
-#content {
-  width: 100%;
-  /* Full Width */
-  height: 5px;
-  margin: 50px auto;
-  background: #000;
-}
-
 #loadingProgressG {
   width: 711px;
   height: 10px;
   overflow: hidden;
-  background-color: rgba(34, 34, 34, 0.2);
+  background-color: rgba(167, 129, 129, 0.2);
   margin: auto;
   border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
 }
 
-.loadingProgressG {
+#loadingProgressG .loadingProgressG {
   background-color: #FF2E63;
   margin-top: 0;
   margin-left: -711px;
-  animation-name: bounce_loadingProgressG;
-  -o-animation-name: bounce_loadingProgressG;
-  -ms-animation-name: bounce_loadingProgressG;
   -webkit-animation-name: bounce_loadingProgressG;
-  -moz-animation-name: bounce_loadingProgressG;
-  animation-duration: 8.0s;
-  -o-animation-duration: 8.0s;
-  -ms-animation-duration: 8.0s;
+          animation-name: bounce_loadingProgressG;
   -webkit-animation-duration: 8.0s;
-  -moz-animation-duration: 8.0s;
-  animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -ms-animation-iteration-count: infinite;
+          animation-duration: 8.0s;
   -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  -ms-animation-timing-function: linear;
+          animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
+          animation-timing-function: linear;
   width: 711px;
   height: 10px;
 }
 
-@keyframes bounce_loadingProgressG {
+@-webkit-keyframes bounce_loadingProgressG {
   0% {
     margin-left: -711px;
   }
@@ -684,7 +663,7 @@ input[type="radio"]:checked + label ::before {
   }
 }
 
-@-webkit-keyframes bounce_loadingProgressG {
+@keyframes bounce_loadingProgressG {
   0% {
     margin-left: -711px;
   }

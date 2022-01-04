@@ -61,39 +61,41 @@ const step_1 =`
      <h2 class="survey-step__caption">How often do you  shop online?</h2>
    </div>
     <div class="survey-step__border">
-      <form action="form-survey">
+      <form class="form-survey" action="" id="formQuest">
          <div class="form-survey__wrapper">
-         <input type="radio" name="frequence" id="radio1" data-attribute='Daily'>
+
+            <input type="radio"  name="often" id="radio1" data-attribute='Daily' required>
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Daily</span>  
             </label>            
             
-            <input  type="radio" name="frequence" id="radio2" data-attribute='Once in 2-3 days'>
+            <input  type="radio" name="often" id="radio2" data-attribute='Once in 2-3 days'>
             <label for="radio2" class="form-survey__radio">
                <span class="form-survey__radiotext"> Once in 2-3 days</span>
             </label>
            
-            <input  type="radio" name="frequence" id="radio3" data-attribute='Weekly'>
+            <input  type="radio" name="often" id="radio3" data-attribute='Weekly'>
             <label for="radio3" class="form-survey__radio">
                <span class="form-survey__radiotext">Weekly</span>
             </label>
             
-            <input  type="radio" name="frequence" id="radio4" data-attribute='Monthly'>
+            <input  type="radio" name="often" id="radio4" data-attribute='Monthly'>
             <label for="radio4" class="form-survey__radio">
                <span class="form-survey__radiotext">Monthly</span>
             </label>
            
-            <input type="radio" name="frequence" id="radio5" data-attribute='Once in 2-3 months'>
+            <input type="radio" name="often" id="radio5" data-attribute='Once in 2-3 months'>
             <label for="radio5" class="form-survey__radio">
                <span class="form-survey__radiotext">Once in 2-3 months</span>
             </label>
             
-            <input  type="radio" name="frequence" id="radio6" data-attribute='When I'm free'>
+            <input  type="radio" name="often" id="radio6" data-attribute='When I'm free'>
             <label for="radio6" class="form-survey__radio">
-               <span class="form-survey__radiotext">When I'm free</span>
-            </label>
-            
-            
+             <span class="form-survey__radiotext">When I'm free</span>
+            </label>         
+
+            <span class="error"> </span>
+
             <button class="form-survey__button" >Next </button>
           </div> 
        </form>        
@@ -112,46 +114,50 @@ const step_2 = `
      <h2 class="survey-step__caption">What types of products do you typically buy online?</h2>
    </div>
     <div class="survey-step__border">
-      <form action="form-survey">
+    <form class="form-survey" action="" id="formQuest">
          <div class="form-survey__wrapper">
-         <input type="radio" name="products" id="radio1" data-attribute='Electronics'>
+
+            <input type="radio" name="types" id="radio1" data-attribute='Electronics' required>
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Electronics</span>  
             </label>            
            
-            <input  type="radio" name="products" id="radio2" data-attribute='Smart devices'>
+            <input  type="radio" name="types" id="radio2" data-attribute='Smart devices'>
             <label for="radio2" class="form-survey__radio">
                <span class="form-survey__radiotext"> Smart devices </span>
             </label>
            
-            <input  type="radio" name="products" id="radio3" data-attribute='Home/kitchen appliances'>
+            <input  type="radio" name="types" id="radio3" data-attribute='Home/kitchen appliances'>
             <label for="radio3" class="form-survey__radio">
                <span class="form-survey__radiotext">Home/kitchen appliances</span>
             </label>
             
-            <input  type="radio" name="products" id="radio4" data-attribute='Health and beauty'>
+            <input  type="radio" name="types" id="radio4" data-attribute='Health and beauty'>
             <label for="radio4" class="form-survey__radio">
                <span class="form-survey__radiotext">Health and beauty</span>
             </label>
             
-            <input type="radio" name="products" id="radio5" data-attribute='Clothing and accessories'>
+            <input type="radio" name="types" id="radio5" data-attribute='Clothing and accessories'>
             <label for="radio5" class="form-survey__radio">
                <span class="form-survey__radiotext">Clothing and accessories</span>
             </label>
            
-            <input  type="radio" name="products" id="radio6" data-attribute='Food and grocery'>
+            <input  type="radio" name="types" id="radio6" data-attribute='Food and grocery'>
             <label for="radio6" class="form-survey__radio">
                <span class="form-survey__radiotext">Food and grocery</span>
             </label>
           
-            <input  type="radio" name="products" id="radio7" data-attribute='Other'>
+            <input  type="radio" name="types" id="radio7" data-attribute='Other'>
             <label for="radio7" class="form-survey__radio">
                <span class="form-survey__radiotext">Other (please specify) </span>
             </label>
+            <span class="error"> </span>
         
-            <textarea  class="form-survey__textarea hide" id="othertext2" placeholder="Please us know more... "></textarea>
-            
+            <textarea  class="form-survey__textarea hide" name="textarea" id="othertext2"
+            placeholder="Please us know more... " required ></textarea>
+          
             <button class="form-survey__button" >Next </button>
+            
           </div> 
        </form>        
     </div>  
@@ -169,38 +175,33 @@ const step_3 = `
        <h2 class="survey-step__caption">What is the best website to buy from?</h2>
      </div>
       <div class="survey-step__border">
-        <form action="form-survey">
+      <form class="form-survey" action="" id="formQuest">
            <div class="form-survey__wrapper">
-           <input type="radio" name="website" id="radio1" data-attribute='Amazon'>
+           <input type="radio" name="website" id="radio1" data-attribute='Amazon' required>
               <label for="radio1" class="form-survey__radio">                 
               <span class="form-survey__radiotext">Amazon</span>  
               </label>            
              
-  
               <input  type="radio" name="website" id="radio2" data-attribute='Ikea'>
               <label for="radio2" class="form-survey__radio">
                  <span class="form-survey__radiotext"> Ikea </span>
               </label>
-              
-  
+                
               <input  type="radio" name="website" id="radio3" data-attribute='Target'>
               <label for="radio3" class="form-survey__radio">
                  <span class="form-survey__radiotext">Target</span>
               </label>
-              
-  
+                
               <input  type="radio" name="website" id="radio4" data-attribute='Best Buy'>
               <label for="radio4" class="form-survey__radio">
                  <span class="form-survey__radiotext">Best Buy</span>
               </label>
-              
-  
+                
               <input type="radio" name="website" id="radio5" data-attribute='P.C. Richard & Son'>
               <label for="radio5" class="form-survey__radio">
                  <span class="form-survey__radiotext">P.C. Richard & Son</span>
               </label>
-              
-  
+                
               <input  type="radio" name="website" id="radio6" data-attribute='The Home Depot'>
               <label for="radio6" class="form-survey__radio">
                  <span class="form-survey__radiotext">The Home Depot</span>
@@ -210,9 +211,10 @@ const step_3 = `
               <label for="radio7" class="form-survey__radio">
                  <span class="form-survey__radiotext">Other (please specify) </span>
               </label>
-              
-  
-              <textarea  class="form-survey__textarea hide" id="othertext3" placeholder="Please us know more... "></textarea>
+              <span class="error"> </span>
+                
+              <textarea  class="form-survey__textarea hide" id="othertext3"
+              placeholder="Please us know more... " required ></textarea>
               
               <button class="form-survey__button" >Next </button>
             </div> 
@@ -232,9 +234,10 @@ const step_4 =`
      <h2 class="survey-step__caption">What attracts you to buy in this online store?</h2>
    </div>
     <div class="survey-step__border">
-      <form action="form-survey">
+    <form class="form-survey" action="" id="formQuest">
          <div class="form-survey__wrapper">
-         <input type="radio" name="attracts" id="radio1" data-attribute='Good quality'>
+
+           <input type="radio" name="attracts" id="radio1" data-attribute='Good quality' required>
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Good quality</span>  
             </label>            
@@ -268,8 +271,10 @@ const step_4 =`
             <label for="radio7" class="form-survey__radio">
                <span class="form-survey__radiotext">Other (please specify) </span>
             </label>
+            <span class="error"> </span>
           
-            <textarea  class="form-survey__textarea hide" id="othertext4" placeholder="Please us know more... "></textarea>
+            <textarea  class="form-survey__textarea hide" id="othertext4" 
+            placeholder="Please us know more... " required ></textarea>
             
             <button class="form-survey__button" >Next </button>
           </div> 
@@ -289,44 +294,47 @@ const step_5 = `
      <h2 class="survey-step__caption">How much do you spend on online shopping monthly?</h2>
    </div>
     <div class="survey-step__border">
-      <form action="form-survey">
+    <form class="form-survey" action="" id="formQuest">
          <div class="form-survey__wrapper">
-         <input type="radio" name="expend" id="radio1" data-attribute='Less than 100 USD'>
+
+            <input type="radio" name="price" id="radio1" data-attribute='Less than 100 USD' required>
             <label for="radio1" class="form-survey__radio">                 
             <span class="form-survey__radiotext">Less than 100 USD</span>  
             </label>            
            
-            <input  type="radio" name="expend" id="radio2" data-attribute='$100 - $250'>
+            <input  type="radio" name="price" id="radio2" data-attribute='$100 - $250'>
             <label for="radio2" class="form-survey__radio">
                <span class="form-survey__radiotext"> $100 - $250 </span>
             </label>
           
-            <input  type="radio" name="expend" id="radio3" data-attribute='$250 - $500'>
+            <input  type="radio" name="price" id="radio3" data-attribute='$250 - $500'>
             <label for="radio3" class="form-survey__radio">
                <span class="form-survey__radiotext">$250 - $500</span>
             </label>
             
-            <input  type="radio" name="expend" id="radio4" data-attribute='$500 - $1000 '>
+            <input  type="radio" name="price" id="radio4" data-attribute='$500 - $1000 '>
             <label for="radio4" class="form-survey__radio">
                <span class="form-survey__radiotext">$500 - $1000</span>
             </label>
            
-            <input type="radio" name="expend" id="radio5" data-attribute='$1000 - $2000'>
+            <input type="radio" name="price" id="radio5" data-attribute='$1000 - $2000'>
             <label for="radio5" class="form-survey__radio">
                <span class="form-survey__radiotext">$1000 - $2000</span>
             </label>
             
-            <input  type="radio" name="expend" id="radio6" data-attribute='More than 2000 USD'>
+            <input  type="radio" name="price" id="radio6" data-attribute='More than 2000 USD'>
             <label for="radio6" class="form-survey__radio">
                <span class="form-survey__radiotext">More than 2000 USD</span>
             </label>
             
-            <input  type="radio" name="expend" id="radio7" data-attribute='Other'>
+            <input  type="radio" name="price" id="radio7" data-attribute='Other'>
             <label for="radio7" class="form-survey__radio">
                <span class="form-survey__radiotext">Other (please specify) </span>
             </label>
+            <span class="error"> </span>
             
-            <textarea  class="form-survey__textarea hide" id="othertext5" placeholder="Please us know more... "></textarea>
+            <textarea  class="form-survey__textarea hide" id="othertext5" 
+            placeholder="Please us know more... " required ></textarea>
             
             <button class="form-survey__button" >Next </button>
           </div> 
@@ -348,7 +356,7 @@ const step_6 =`
                 <div class=" survey-endstep__progressbar">
                    <div id="loadingProgressG">
                    <div id="loadingProgressG_1" class="loadingProgressG" value="0" max="100"></div> </div>
-                </div>    
+                  </div>    
                      <p class="survey-endstep__text">Answers submitted.....</p>
                      <p class="survey-endstep__text">Ma tching best offers for you......</p>                
                </div>   
@@ -497,191 +505,213 @@ const step_7 =`
 </section> 
  
  `
- //Валидация формы на стороне клиента
- $("form").validate({
-   rules: {
-     // name: "required",
-      email: {
-        required: true,
-         email: true
-      }
-    },
-    messages: {
-      //name: "Please specify your name",
-      email: {
-        required: "We need your email address to contact you",
-        email: "Your email address must be in the format of name@domain.com"
-      }
-    }
-
- });
-
-//  const form  = $('form');
-//  const email = $('#email');
-//  const emailError = $('#email + span.error');
-//  console.log(emailError);
-
-//  function validated(){    
-//    email.on('click', function () {
-//      // Каждый раз, когда пользователь что-то вводит,
-//      // мы проверяем, являются ли поля формы валидными
-   
-//      if (email.validity.valid) {
-//        // Если на момент валидации какое-то сообщение об ошибке уже отображается,
-//        // если поле валидно, удаляем сообщение
-//        emailError.text(''); // Сбросить содержимое сообщения
-//        emailError.addClass('error') ; // Сбросить визуальное состояние сообщения
-//      } else {
-//        // Если поле не валидно, показываем правильную ошибку
-//        showError();
-//      }
-//    })
-
-//  }
-
-
-// function showError() {
-//    if(email.validity.valueMissing) {
-//      // Если поле пустое,
-//      // отображаем следующее сообщение об ошибке
-//      emailError.text('Please enter e-mail address')
-//    } else if (email.validity.typeMismatch ) {
-//      // Если поле содержит не email-адрес,
-//      // отображаем следующее сообщение об ошибке
-//      emailError.text('Please enter a valid email address')
-//    }
-// }
-
  
- 
- 
-//  $('form').click(function(e)  {
+ //Валидация email на стороне клиента
+  $('#formStart').validate({
+      rules:{
+          email: {
+           required: true,
+            email: true
+         },
+      },
+       messages: {
+         email: {
+           required: 'Please need your email address',
+           email: 'Your email address must be in the format of name@domain.com'
+         }        
+       },
+       submitHandler: function(event) {
+         event.preventDefault()
+       }
+      })
+      
+function validStep() {          
+     const input =$('input[type="radio"]'); 
+         $('#formQuest').on('click', function(){        
+         $.each($(input), function () {
+            if ($(this).is(':checked')){ 
+               $('#formQuest').removeClass('invalid').addClass('valid')
+               $('.error').text('')
+              return false;        
+            }
+             else {      
+              $('#formQuest').addClass('invalid')
+              $('.error').text('Please make your choice')
+              //return true; 
+         } 
+     }) 
   
-//    const email = $('input[type="email"]').val()
-//    $(".error").remove(); 
-//      if (email.length <= 1) {
-//       $('#email').after('<span class="error">Please enter e-mail address</span>')
-//       //$(this).addClass('error')
-//       console.log(1);
-//      } else{
-//       let regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
-//       let validEmail = regEx.test(email);
-//       if (!validEmail) {
-//         $('#email').after('<span class="error">Please enter a valid email address</span>');
-//         console.log(2);
-//       }
-//        //$(this).removeClass('error')
-//       //console.log(15);
-//      }
-//    })
-
+   })
+}
+  
 function checkedRadio(step, key, class1, class2) {
    $.each($('input[type="radio"]'), function () {
-      if ( $(this).is(':checked') ) {
-         data[`${key}`] = $(this).attr('data-attribute')
+      if ( $(this).is(':checked') && $('input:checked').attr('data-attribute') !== 'Other'){
+         data[`${key}`] = $(this).attr('data-attribute');
          main.html(step);
          body.removeClass(`${class1}`).addClass(`${class2}`)
+        }  
+        else {
+           textareaOn();
         } 
    })
 }
-
 //включение и выключение текстового поля textarea на стеках
 function textareaOn(){  
    const textarea = $('.form-survey__textarea');   
    $.each($('input[type="radio"]'), function() {
-
-      $(this).on('click', ()=>{
+     $(this).on('click', ()=>{
          if($(this).attr('data-attribute') == 'Other'){
-            textarea.removeClass('hide')             
-            textValue()           
+            textarea.removeClass('hide');
+            textarea.addClass('invalid')
+           textValue()         
           } else {
-               textarea.addClass('hide')                        
+            textarea.addClass('hide');
+                                  
           }         
       })     
    })
 }
 
-
-   
-//Получение значения с textarea, если оно заполнено, передать данные в объект
-
+//Получение значения с textarea, если оно заполнено, записать данные в объект
 function  textValue(){   
-   $('.form-survey__textarea').on('change', function(){
-      let textareas = $('textarea');         
-      $.each (textareas, function() {
-         let textarea=$(this)
-        
+  $('.form-survey__textarea').on('input', function(){
+   let textareas = $('textarea');         
+   $.each (textareas, function() {
+      let textarea=$(this).val();              
          switch ($(this).attr('id')) {
-            case 'othertext2':    
-               data.question_2_other= $(this).val();           
-               break;
-             case 'othertext3':
-                  data.question_3_other = $(this).val();                  
-                  break;    
-             case 'othertext4':
-                  data.question_4_other = $(this).val();
-                  break;      
-             case 'othertext5':
-                  data.question_5_other= $(this).val();                
-                  break;        
-         } 
-      })
-   })
+           case 'othertext2':  
+                  if($(this).val() !== 0){
+                    textareas.removeClass('invalid').addClass('valid') 
+                    data.question_2_other= $(this).val();                  
+                    break;
+                 }                     
+          
+            case 'othertext3':                     
+                 if($(this).val() !== 0){
+                    textareas.removeClass('invalid').addClass('valid') 
+                    data.question_3_other = $(this).val(); 
+                    break;
+                 }                 
+                     
+            case 'othertext4':                     
+                 if($(this).val() !== 0){
+                    textareas.removeClass('invalid').addClass('valid') 
+                    data.question_4_other = $(this).val();
+                    break;   
+                 }        
+                   
+            case 'othertext5':                     
+                 if($(this).val() !== 0){
+                    textareas.removeClass('invalid').addClass('valid') 
+                    data.question_5_other= $(this).val(); 
+                    break;  
+                 }                         
+             }             
+        }) 
+     })  
  }  
 
-
-function changeStep() {
-   
-   if (body.is('.previewStep')) {          
-      data.email = $('input[name="email"]').val();      
-
-      if (data.email.length !== 0) {
-         main.html(step_1);
-         body.removeClass('previewStep').addClass('firstStep');
-      }
+function changeOther() { 
+ 
+   if (body.is('.secondStep')){
+       main.html(step_3);
+       body.removeClass('secondStep').addClass('thirdStep');       
    }
-   else if (body.is('.firstStep') ){
-          checkedRadio(step_2, 'question_1', 'firstStep', 'secondStep');
-          textareaOn();        
-        } 
-   else if (body.is('.secondStep')) {      
-          checkedRadio(step_3, 'question_2', 'secondStep', 'thirdStep');
-          textareaOn(); 
-         }
-   else if (body.is('.thirdStep')) {
-           checkedRadio(step_4, 'question_3', 'thirdStep', 'fourthStep'); 
-           textareaOn();
-         }
-   else if (body.is('.fourthStep')) {
-         checkedRadio(step_5, 'question_4', 'fourthStep', 'fifthStep') ;
-         textareaOn();
-         } 
-   else if (body.is('.fifthStep')) {         
-          checkedRadio(step_6, 'question_5', 'fifthStep', 'endStep'); 
-          textareaOn(); 
-          submitForm();      
-         }    
+   else if (body.is('.thirdStep')){    
+      main.html(step_4);
+      body.removeClass('thirdStep').addClass('fourthStep');
+   }
+   else if (body.is('.fourthStep')){
+      main.html(step_5);
+      body.removeClass('fourthStep').addClass('fifthStep');
+   }
+   else if (body.is('.fifthStep')){
+     
+      if($('textarea').hasClass('valid')){
+         submitForm();
+         main.html(step_6);
+         body.removeClass('fifthStep').addClass('endStep');
+      }   
+   }
 }
 
 
+function changeStep() {   
+   if (body.is('.previewStep')) {          
+      data.email = $('input[name="email"]').val();      
+      if($('input[name="email"]').hasClass('valid') ) {
+         main.html(step_1);
+         body.removeClass('previewStep').addClass('firstStep');
+      } 
+   }
+   else if (body.is('.firstStep') ){   
+      textareaOn();  
+      textValue()             
+      checkedRadio(step_2, 'question_1', 'firstStep', 'secondStep');           
+   } 
+   else if (body.is('.secondStep')) {  
+      textareaOn();
+      textValue() 
+      checkedRadio(step_3, 'question_2', 'secondStep', 'thirdStep'); 
+   }
+   else if (body.is('.thirdStep')) {  
+      textareaOn();
+      textValue()  
+      checkedRadio(step_4, 'question_3', 'thirdStep', 'fourthStep');     
+   }
+   else if (body.is('.fourthStep')) {  
+      textareaOn();
+      textValue()     
+      checkedRadio(step_5, 'question_4', 'fourthStep', 'fifthStep');      
+   } 
 
+   else if (body.is('.fifthStep')) {   
 
-main.on('click', 'button', function (e) {
-   e.preventDefault(); 
-   $("form").validate  
-   changeStep()
-  
-})
+      if($('#formQuest').hasClass('valid')){ 
+      submitForm();       
+      }     
+      textareaOn();
+      textValue() 
+      checkedRadio(step_6, 'question_5', 'fifthStep', 'endStep'); 
+   }  
+ }
+
+//  function userProgress(time){
+//     let start = 0;
+//     let progressElement = $('#loadingProgressG_1');
+//     console.log(progressElement);
+//     let intervalId = setInterval( function(){
+//        if (start > 100){
+//           clearInterval(intervalId);
+//           //userProgressCallBack();
+//        }
+//        else{
+//          progressElement.value = start;
+//        }
+//        start ++;       
+//     },time);
+//  }
+ 
 
 function endStep() {
-   if ( $('#loadingProgressG').hide()) {          
+   if ( $('#loadingProgressG_1').hide()) {          
       main.html(step_7)
    }
 }
 
+main.on('click', 'button', function () {    
+   if ($('textarea').hasClass('valid')){
+      changeOther()
+   }     
+   changeStep();   
+   validStep();
+})
+ 
 
-const submitForm = async () => {   
-   try {
+
+let submitForm = async () => {   
+   try {      
       $('#loadingProgressG').show()
       await $.ajax({
          url: 'http://localhost:8000/posts',
@@ -697,14 +727,15 @@ const submitForm = async () => {
             question_4_other:  data.question_4_other,
             question_5: data.question_5,
             question_5_other:  data.question_5_other,
-         }
+         },        
+    
       })
       
    } catch (error) {
       console.error(error);
       console.log(data);
       $('#loadingProgressG').hide()
-      endStep()
+     endStep()
    }
 }
 
