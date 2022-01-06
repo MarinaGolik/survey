@@ -354,8 +354,8 @@ const step_6 =`
            <div class=" survey-endstep__wrapper">
               <div class=" survey-endstep__processing">
                 <div class=" survey-endstep__progressbar">
-                   <div id="loadingProgressG">
-                   <div id="loadingProgressG_1" class="loadingProgressG" value="0" max="100"></div> </div>
+                <div id="loadingProgressG">
+                <div id="loadingProgressG_1" class="loadingProgressG" value="0" max="100"></div> </div>
                   </div>    
                      <p class="survey-endstep__text">Answers submitted.....</p>
                      <p class="survey-endstep__text">Ma tching best offers for you......</p>                
@@ -517,7 +517,7 @@ const step_7 =`
        messages: {
          email: {
            required: 'Please need your email address',
-           email: 'Your email address must be in the format of name@domain.com'
+           email: 'E-mail format should be name@domain.com'
          }        
        },
        submitHandler: function(event) {
@@ -540,9 +540,10 @@ function validStep() {
               //return true; 
          } 
      }) 
-  
    })
 }
+
+
   
 function checkedRadio(step, key, class1, class2) {
    $.each($('input[type="radio"]'), function () {
@@ -630,9 +631,10 @@ function changeOther() {
      
       if($('textarea').hasClass('valid')){
          submitForm();
+      } 
          main.html(step_6);
          body.removeClass('fifthStep').addClass('endStep');
-      }   
+       
    }
 }
 
@@ -669,36 +671,16 @@ function changeStep() {
    else if (body.is('.fifthStep')) {   
 
       if($('#formQuest').hasClass('valid')){ 
-      submitForm();       
+      submitForm();     
       }     
       textareaOn();
       textValue() 
       checkedRadio(step_6, 'question_5', 'fifthStep', 'endStep'); 
+      
    }  
  }
 
-//  function userProgress(time){
-//     let start = 0;
-//     let progressElement = $('#loadingProgressG_1');
-//     console.log(progressElement);
-//     let intervalId = setInterval( function(){
-//        if (start > 100){
-//           clearInterval(intervalId);
-//           //userProgressCallBack();
-//        }
-//        else{
-//          progressElement.value = start;
-//        }
-//        start ++;       
-//     },time);
-//  }
  
-
-function endStep() {
-   if ( $('#loadingProgressG_1').hide()) {          
-      main.html(step_7)
-   }
-}
 
 main.on('click', 'button', function () {    
    if ($('textarea').hasClass('valid')){
@@ -707,12 +689,21 @@ main.on('click', 'button', function () {
    changeStep();   
    validStep();
 })
- 
+
+
+
+
+// $(document).on('ajaxSend', function(){
+//    showProgress(20)
+// })
+// .on('ajaxStop', function(){
+//    showProgress()
+// })
 
 
 let submitForm = async () => {   
-   try {      
-      $('#loadingProgressG').show()
+  
+   try {     
       await $.ajax({
          url: 'http://localhost:8000/posts',
          type: 'POST',
@@ -727,15 +718,20 @@ let submitForm = async () => {
             question_4_other:  data.question_4_other,
             question_5: data.question_5,
             question_5_other:  data.question_5_other,
-         },        
+         },
+         beforeSend: function(){
+          $('#loadingProgressG').show()
+      }
     
       })
       
+      
    } catch (error) {
       console.error(error);
-      console.log(data);
-      $('#loadingProgressG').hide()
-     endStep()
+      console.log(data);    
+   }
+   finally {
+      main.html(step_7)
    }
 }
 
@@ -765,3 +761,21 @@ let submitForm = async () => {
 
 //      spanData.innerHTML = newDate;
 //      spanDataTwo.innerHTML = newDate;
+
+
+// function showProgress(time){
+//    let start = 0;
+//    let progressElement = document.querySelector('progress');
+//    console.log(progressElement);
+//    console.log(1);
+//    let intervalId = setInterval( function(){
+//       if (start > 100){
+//          clearInterval(intervalId);
+//          //userProgressCallBack();
+//       }
+//       else{
+//         progressElement.value = start;
+//       }
+//       start ++;       
+//    },time);
+// }
